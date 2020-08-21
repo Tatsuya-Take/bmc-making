@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
+import SidebarOption from './SidebarOption';
+import MenuIcon from '@material-ui/icons/Menu';
+import "./Sidebar.css";
 
 function Sidebar() {
   return (
-    <div>
-      
+    <div className="sidebar">
+      {/* MenuIcon */}
+      <MenuIcon className="sidebar__menuIcon" />
+
+      <SidebarOption active text="3C analisis" />
+      <SidebarOption text="4C analisis" />
+      <SidebarOption text="SWOT analisis" />
+      <SidebarOption text="Five force analisis" />
     </div>
   )
 }
 
-export default Sidebar
+export default Sidebar;

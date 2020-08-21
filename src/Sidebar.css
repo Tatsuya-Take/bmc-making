@@ -1,0 +1,15 @@
+.sidebar {
+  border-right: 1px solid var(--border-color);
+  flex: 0.3;
+  margin-top: 20px;
+  min-width: 250px;
+  max-width: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidebar__menuIcon {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
