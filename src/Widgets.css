@@ -1,0 +1,16 @@
+.widgets {
+  flex: 0.3;
+}
+
+.widgets__input {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  padding-top: 15px;
+  padding-right: 50px;
+}
+
+.widgets__results {
+  overflow-y: scroll;
+  height: 300px;
+}

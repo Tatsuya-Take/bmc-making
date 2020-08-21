@@ -6,6 +6,9 @@ function Field() {
   return (
     <div className="canvas">
       <form>
+        <div className="canvas__title">
+          <input placeholder="input title" />
+        </div>
         <div className="canvas__top">
           <div className="canvas__topcontent">
             <span className="canvas__contenttitle">concept</span>

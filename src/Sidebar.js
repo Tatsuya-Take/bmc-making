@@ -9,7 +9,8 @@ function Sidebar() {
       {/* MenuIcon */}
       <MenuIcon className="sidebar__menuIcon" />
 
-      <SidebarOption active text="3C analisis" />
+      <SidebarOption active text="BMC" />
+      <SidebarOption text="3C analisis" />
       <SidebarOption text="4C analisis" />
       <SidebarOption text="SWOT analisis" />
       <SidebarOption text="Five force analisis" />

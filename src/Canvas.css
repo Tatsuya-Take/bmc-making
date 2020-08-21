@@ -1,8 +1,29 @@
 .canvas {
-  width: 900px;
-  padding: 20px;
   flex: 0.4;
+  padding-left: 20px;
+  padding-right: 20px;
   min-width: fit-content;
+  border-right: 1px solid var(--border-color);
+}
+
+.canvas__title {
+  color: white;
+  background-color: deepskyblue;
+  border-radius: 5px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.canvas__title > input{
+  color: white;
+  font-size: 30px;
+  background-color: deepskyblue;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
 }
 
 .canvas__top {
@@ -14,7 +35,7 @@
   display: flex;
   flex-direction: column;
   height: 70px;
-  width: 410px;
+  width: 400px;
   border: 2px solid black;
   border-radius: 5px;
   padding-top: 5px;
@@ -24,14 +45,14 @@
 }
 
 .canvas__contentframe {
-  height: 430px;
+  height: 390px;
   display: flex;
   justify-content: space-between;
   padding: 0;
 }
 
 .canvas__content {
-  width: 170px;
+  width: 160px;
   border: 2px solid black;
   border-radius: 5px;
   padding-top: 5px;
@@ -51,7 +72,7 @@
 }
 
 .canvas__rowupper {
-  height: 200px;
+  height: 180px;
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 2px;
@@ -62,7 +83,7 @@
 }
 
 .canvas__rowlower {
-  height: 200px;
+  height: 180px;
   border: 2px solid black;
   border-radius: 5px;
   padding-top: 5px;
@@ -74,7 +95,7 @@
 .field__canvascostsframe {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .canvas__costcontent {
@@ -94,10 +115,10 @@
   border: none;
   font-size: 13px;
   margin-top: 5px;
-  min-width: 400px;
-  max-width: 400px;
-  min-height: 20px;
-  max-height: 50px;
+  min-width: 390px;
+  max-width: 390px;
+  min-height: 40px;
+  max-height: 40px;
 }
 
 .canvas__contentdescription {
@@ -106,8 +127,8 @@
   margin-top: 5px;
   min-width: 160px;
   max-width: 160px;
-  min-height: 20px;
-  max-height: 380px;
+  min-height: 345px;
+  max-height: 345px;
 }
 
 .canvas__rowcontentdescription {
@@ -116,8 +137,8 @@
   margin-top: 5px;
   min-width: 140px;
   max-width: 140px;
-  min-height: 20px;
-  max-height: 170px;
+  min-height: 150px;
+  max-height: 150px;
 }
 
 .canvas__costcontentdescription {
@@ -126,6 +147,6 @@
   margin-top: 5px;
   min-width: 425px;
   max-width: 425px;
-  min-height: 20px;
-  max-height: 100px;
+  min-height: 90px;
+  max-height: 90px;
 }

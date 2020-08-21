@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import Sidebar from './Sidebar';
-import Field from './Field';
+import Canvas from './Canvas';
 import Widgets from './Widgets';
+import './App.css';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Sidebar />
 
       {/* Field */}
-      <Field />
+      <Canvas />
 
       {/* Widgets */}
       <Widgets />
