@@ -20,6 +20,8 @@
 .widgetsItem__title {
   font-size: 18px;
   font-weight: 800;
+  width: 98%;
+  overflow: hidden;
 }
 
 .widgetsItem__id {

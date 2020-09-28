@@ -19,13 +19,15 @@ function Widgets() {
     }
   }, [user]);
 
+  const title = 'test_title__title__test_______________';
+
   return (
     <div className="widgets">
       <div className="widgets__title">
         <h2>Your Canvas</h2>
       </div>
       <div className="widgets__canvasList">
-      <WidgetsItem id='test_id' title='test_title__title__test_______________' />
+      <WidgetsItem id='test_id' title={title} />
       <WidgetsItem id='test_id' title='test_title__title__test' />
         {/*{widgetsItems.map(item => (
           

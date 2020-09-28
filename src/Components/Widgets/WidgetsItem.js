@@ -6,9 +6,14 @@ import { useStateValue } from '../Provider/StateProvider';
 
 function SearchResults({title, id}) {
   const history = useHistory();
-  const [{user}] = useStateValue();
+  const [{user}, dispatch] = useStateValue();
 
   const changeCanvas = () => {
+    dispatch({
+      type: 'SET_CANVAS',
+      canvasId: id
+    })
+    
     history.push(`/canvas/${user.displayName}/${id}`);
   }
 
