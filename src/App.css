@@ -1,14 +1,31 @@
+* {
+  margin: 0;
+}
+
 body {
   --hover-color: #50b7f5;
-  --hover-background: #e8f5fe;
+  --hover-background: #f2f2f2;
   --border-color: #e6ecf0;
+  --app-background-color: #ebebeb;
+  --contents-shadow: 5px 5px 4px #b5b5b5,
+                    -5px -5px 4px #ffffff;
+  --hover-shadow: inset 5px 5px 20px #b5b5b5,
+                  inset -5px -5px 20px #ffffff;
+  --active-shadow:  inset 5px 5px 4px #b5b5b5,
+                    inset -5px -5px 4px #ffffff;
+  --button-border: 1.5px solid rgba(108, 190, 245, 0.315);
+  background-color: var(--app-background-color);
 }
 
 .app {
   display: flex;
   height: 100vh;
-  max-width: 1300px;
+  padding: 0 10px;
+  max-width: 1500px;
+}
+
+.app__body {
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10px;
 }

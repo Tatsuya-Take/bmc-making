@@ -1,34 +1,64 @@
 .canvas {
   flex: 0.4;
+  padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
   min-width: fit-content;
-  border-right: 1px solid var(--border-color);
+}
+
+textarea {
+  border-radius: 10px;
+  background-color: var(--app-background-color);
+  padding-left: 5px;
+  resize: none;
+}
+
+textarea:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+textarea:focus {
+  outline: none !important;
+  box-shadow: var(--active-shadow);
 }
 
 .canvas__title {
-  color: white;
-  background-color: deepskyblue;
   border-radius: 5px;
   height: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
+  border: 1.5px solid rgba(108, 190, 245, 0.315);
+  background: linear-gradient(145deg, #fbfbfb, #d4d4d4);
+  box-shadow:  5px 5px 4px #b5b5b5, 
+              -5px -5px 4px #ffffff;
 }
 
 .canvas__title > input{
-  color: white;
+  color: black;
   font-size: 30px;
-  background-color: deepskyblue;
+  background: linear-gradient(145deg, #fbfbfb, #d4d4d4);
   border-radius: 5px;
   border: none;
   height: 40px;
+  width: 800px;
+  padding-left: 5px;
+}
+
+.canvas__title > input:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+.canvas__title > input:focus {
+  outline: none;
+  box-shadow: var(--active-shadow);
 }
 
 .canvas__top {
   height: 90px;
   padding-left: 485px;
+  margin-bottom: 5px;
 }
 
 .canvas__topcontent {
@@ -36,16 +66,17 @@
   flex-direction: column;
   height: 70px;
   width: 400px;
-  border: 2px solid black;
   border-radius: 5px;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
   padding-bottom: 5px;
+  border: 1.5px solid rgba(108, 190, 245, 0.315);
+  box-shadow:  var(--contents-shadow);
 }
 
 .canvas__contentframe {
-  height: 390px;
+  height: 400px;
   display: flex;
   justify-content: space-between;
   padding: 0;
@@ -53,12 +84,13 @@
 
 .canvas__content {
   width: 160px;
-  border: 2px solid black;
   border-radius: 5px;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
+  border: 1.5px solid rgba(108, 190, 245, 0.315);
+  box-shadow:  var(--contents-shadow);
 }
 
 .canvas__contenttitle {
@@ -72,30 +104,33 @@
 }
 
 .canvas__rowupper {
-  height: 180px;
-  border: 2px solid black;
+  height: 183px;
   border-radius: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 7px;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
   padding-bottom: 5px;
+  border: 1.5px solid rgba(108, 190, 245, 0.315);
+  box-shadow:  var(--contents-shadow);
 }
 
 .canvas__rowlower {
-  height: 180px;
-  border: 2px solid black;
+  height: 183px;
   border-radius: 5px;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
   padding-bottom: 5px;
+  border: 1.5px solid rgba(108, 190, 245, 0.315);
+  box-shadow:  var(--contents-shadow);
 }
 
 .field__canvascostsframe {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .canvas__costcontent {
@@ -103,12 +138,13 @@
   flex-direction: column;
   width: 430px;
   height: 120px;
-  border: 2px solid black;
   border-radius: 5px;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 5px;
   padding-bottom: 5px;
+  border: 1.5px solid rgba(108, 190, 245, 0.315);
+  box-shadow:  var(--contents-shadow);
 }
 
 .canvas__topcontentdescription {
@@ -125,8 +161,8 @@
   border: none;
   font-size: 13px;
   margin-top: 5px;
-  min-width: 160px;
-  max-width: 160px;
+  min-width: 150px;
+  max-width: 150px;
   min-height: 345px;
   max-height: 345px;
 }
@@ -145,8 +181,32 @@
   border: none;
   font-size: 13px;
   margin-top: 5px;
-  min-width: 425px;
-  max-width: 425px;
+  min-width: 415px;
+  max-width: 415px;
   min-height: 90px;
   max-height: 90px;
 }
+
+.canvas__buttonWrapper {
+  width: 140px;
+  margin-top: 15px;
+  padding-left: 700px;
+}
+
+.canvas__saveButton {
+  width: 205px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 10px;
+  border: var(--button-border);
+  box-shadow:  var(--contents-shadow);
+}
+
+.canvas__saveButton:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+.canvas__saveButton:active {
+  box-shadow: var(--active-shadow)
+;}

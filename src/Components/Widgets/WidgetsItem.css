@@ -1,0 +1,28 @@
+.widgetsItem {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 200px;
+  background-color: var(--app-background-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.widgetsItem:hover {
+  box-shadow: var(--contents-shadow);
+}
+
+.widgetsItem:focus {
+  box-shadow: var(--active-shadow);
+}
+
+.widgetsItem__title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.widgetsItem__id {
+  display: none;
+}
+
