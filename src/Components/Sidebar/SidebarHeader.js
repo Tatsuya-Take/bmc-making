@@ -1,19 +1,24 @@
 import React from 'react';
-import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from 'react-router-dom';
 import './SidebarHeader.css';
+import { useStateValue } from '../Provider/StateProvider';
 
-function SidebarHeader({ user }) {
+function SidebarHeader() {
+  const [{user}] = useStateValue();
+
   return (
     <div className="sidebarHeader">
-      <MenuIcon className="sidebarHeader__menuIcon" />
+        <div className="sidebarHeader__title">
+          <h3>Business Model</h3>
+          <h3>Canvas Making</h3>
+        </div>
 
-      <div className="sidebarHeader__title">
-        <Link to="/login">Business Model Canvas Making</Link>
-      </div>
-      <div className="sidebarHeader__user">
-        <h3>{user ? user : 'Guest'}</h3>
-      </div>
+      <Link to={!user && '/login'}>
+        <div className={`${user && "sidebarHeader__user"} ${!user && "sidebarHeader__signedOutUser"}`}>
+          <h3>{!user ? 'Guest' : user.displayName}</h3>
+        </div>
+      </Link>
+
     </div>
   )
 }

@@ -2,24 +2,24 @@ import React, { useState, useEffect } from 'react';
 import "./SidebarOption.css"
 import { db } from '../../firebase';
 
-function SidebarOption({ name, email }) {
+function SidebarOption({ name, id }) {
   const [isOnline, setisOnline] = useState(false);
 
   useEffect(() => {
-    if (email) {
-      db.collection('user').doc(email)
+    if (id) {
+      db.collection('user').doc(id)
       .onSnapshot(snapshot => {
         setisOnline(snapshot.data().isOnline)
       })
     }
-  }, [email])
+  }, [id])
 
   return (
     <div className="sidebarOption">
       <h2>{name}</h2>
       {isOnline ? (
-        <p>⚪️</p>
-      ) : null}
+        <p>●</p>
+      ) : <p>○</p>}
     </div>
   )
 }

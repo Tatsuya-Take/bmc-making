@@ -6,20 +6,18 @@ import { useStateValue } from '../Provider/StateProvider';
 
 function Widgets() {
   const [widgetsItems, setWidgetsItems] = useState([]);
-  const [{ user }] = useStateValue();
+  const [{ userHash }] = useStateValue();
   
   useEffect(() => {
-    if(user) {
-      db.collection('user').doc(user.email)
+    if(userHash) {
+      db.collection('user').doc(userHash)
         .collection('canvas')
         .orderBy('timestamp', 'asc')
         .onSnapshot(snapshot => (
         setWidgetsItems(snapshot.docs.map(doc => ({id: doc.id, title: doc.data().title})))
       ))
     }
-  }, [user]);
-
-  const title = 'test_title__title__test_______________';
+  }, [userHash]);
 
   return (
     <div className="widgets">
@@ -27,11 +25,9 @@ function Widgets() {
         <h2>Your Canvas</h2>
       </div>
       <div className="widgets__canvasList">
-      <WidgetsItem id='test_id' title={title} />
-      <WidgetsItem id='test_id' title='test_title__title__test' />
-        {/*{widgetsItems.map(item => (
-          
-        ))}*/}
+        {widgetsItems.map(item => (
+          <WidgetsItem id='test_id' title={item.title} id={item.id} />
+        ))}
       </div>
     </div>
   )

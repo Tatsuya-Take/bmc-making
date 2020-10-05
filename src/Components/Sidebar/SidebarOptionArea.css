@@ -1,0 +1,7 @@
+.sidebarOptionArea {
+  overflow-y: scroll;
+  max-height: 70%;
+  padding-top: 15px;
+  padding-left: 8px;
+  padding-right: 5px;
+}

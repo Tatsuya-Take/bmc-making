@@ -13,19 +13,18 @@ body {
                   inset -5px -5px 20px #ffffff;
   --active-shadow:  inset 5px 5px 4px #b5b5b5,
                     inset -5px -5px 4px #ffffff;
-  --button-border: 1.5px solid rgba(108, 190, 245, 0.315);
+  --contents-border: 1.5px solid rgba(108, 190, 245, 0.315);
   background-color: var(--app-background-color);
 }
 
 .app {
-  display: flex;
-  height: 100vh;
   padding: 0 10px;
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .app__body {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100vh;
 }

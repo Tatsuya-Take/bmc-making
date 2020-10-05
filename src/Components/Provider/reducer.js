@@ -1,7 +1,9 @@
 export const initialState = {
   user: null,
-  canvasId: 'default',
-  isPremium: null
+  email: null,
+  userHash: null,
+  canvasId: null,
+  isOnline: false
 }
 
 const reducer = (state, action) => {
@@ -12,6 +14,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.user,
+        email: action.email,
+        userHash: action.userHash,
+        isOnline: action.isOnline
       }
     case 'SET_CANVAS':
       return {

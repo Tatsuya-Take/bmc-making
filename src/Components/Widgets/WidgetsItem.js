@@ -9,12 +9,14 @@ function SearchResults({title, id}) {
   const [{user}, dispatch] = useStateValue();
 
   const changeCanvas = () => {
-    dispatch({
-      type: 'SET_CANVAS',
-      canvasId: id
-    })
-    
-    history.push(`/canvas/${user.displayName}/${id}`);
+    if (user?.uid) { 
+      dispatch({
+        type: 'SET_CANVAS',
+        canvasId: id
+      })
+      
+      history.push(`/canvas/${user.displayName}/${id}`);
+    }
   }
 
   return (

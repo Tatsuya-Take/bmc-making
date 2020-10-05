@@ -1,5 +1,6 @@
 .canvas {
   flex: 0.4;
+  height: 100%;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -188,12 +189,12 @@ textarea:focus {
 }
 
 .canvas__buttonWrapper {
-  width: 140px;
+  display: flex;
   margin-top: 15px;
-  padding-left: 700px;
+  justify-content: space-between;
 }
 
-.canvas__saveButton {
+.canvas__button {
   width: 205px;
   height: 50px;
   font-size: 18px;
@@ -201,12 +202,13 @@ textarea:focus {
   border-radius: 10px;
   border: var(--button-border);
   box-shadow:  var(--contents-shadow);
+  outline-width: 0;
 }
 
-.canvas__saveButton:hover {
+.canvas__button:hover {
   box-shadow: var(--hover-shadow);
 }
 
-.canvas__saveButton:active {
+.canvas__button:active {
   box-shadow: var(--active-shadow)
 ;}

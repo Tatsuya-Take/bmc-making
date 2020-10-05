@@ -7,7 +7,6 @@ function Login() {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState();
-  const canvasId = 'default';
 
   const signIn = e => {
     e.preventDefault();
@@ -15,9 +14,8 @@ function Login() {
     auth
     .signInWithEmailAndPassword(email, password)
     .then((auth) => {
-      console.log(auth);
       if (auth) {
-        history.push(`/canvas/${auth.user.displayName}/${canvasId}`)
+        history.push(`/canvas/${auth.user.displayName}/`)
       }
     })
     .catch(error => alert(error.message))
@@ -32,6 +30,7 @@ function Login() {
     <div className="login">
       <div className="login__container">
         <form action="submit">
+          <h2>Sign In</h2>
           <h3>E-mail</h3>
           <input type="text" onChange={(e) => setEmail(e.target.value)} placeholder="input E-mail address" />
           

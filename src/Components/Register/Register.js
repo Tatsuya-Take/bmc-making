@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth, db } from '../../firebase';
 import './Register.css';
+const crypto = require('crypto');
 
 function Register() {
   const history = useHistory();
   const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const digestHash = (message) => {
+    const hash = crypto.createHash('sha256').update(message).digest('hex');
+    return hash;
+  }
 
   const register = e => {
     e.preventDefault();
@@ -20,16 +26,18 @@ function Register() {
           auth.user.updateProfile({
             displayName: displayName
           })
-          console.log(auth.user)
+          
+          const userHash = digestHash(email);
 
-          db.collection('user').doc(email)
+          db.collection('user').doc(userHash)
           .set({
             displayName: displayName,
             email: email,
+            userHash: userHash,
             isOnline: true
           })
 
-          history.push(`/canvas/${displayName}/default`)
+          history.push(`/canvas/${displayName}/`)
         }
       })
       .catch(error => alert(error.message))
@@ -39,6 +47,7 @@ function Register() {
     <div className="register">
       <div className="register__container">
         <form action="submit">
+          <h2>Sign Up</h2>
           <h3>User name</h3>
           <input type="text" onChange={(e) => setDisplayName(e.target.value)} placeholder="input user name displayed in this app" />
           <h3>E-mail</h3>

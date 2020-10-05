@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDe-hBvYBwlPZVktf5iid-o3iGSppYstIg",
-  authDomain: "bmc-making-ef9e5.firebaseapp.com",
-  databaseURL: "https://bmc-making-ef9e5.firebaseio.com",
-  projectId: "bmc-making-ef9e5",
-  storageBucket: "bmc-making-ef9e5.appspot.com",
-  messagingSenderId: "46775083778",
-  appId: "1:46775083778:web:95de5d16ca4ce1b586581b",
-  measurementId: "G-XEXVJNPSPT"
+  apiKey: "AIzaSyBY5DQQikGXXZnpZSXt9RUMMinHOZNjpao",
+  authDomain: "bmc-making-51904.firebaseapp.com",
+  databaseURL: "https://bmc-making-51904.firebaseio.com",
+  projectId: "bmc-making-51904",
+  storageBucket: "bmc-making-51904.appspot.com",
+  messagingSenderId: "127622089510",
+  appId: "1:127622089510:web:742180a050bd819609cfe7",
+  measurementId: "G-F6PM9E0XPQ"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

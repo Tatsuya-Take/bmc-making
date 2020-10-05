@@ -1,19 +1,22 @@
 .widgetsItem {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  width: 200px;
+  justify-content: center;
+  height: 30px;
+  width: 90%;
   background-color: var(--app-background-color);
   padding: 10px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.widgetsItem:hover {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
   box-shadow: var(--contents-shadow);
 }
 
-.widgetsItem:focus {
+.widgetsItem:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+.widgetsItem:active {
   box-shadow: var(--active-shadow);
 }
 

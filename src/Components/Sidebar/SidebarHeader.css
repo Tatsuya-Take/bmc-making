@@ -1,4 +1,18 @@
-.sidebarHeader__title > a {
+.sidebarHeader > a {
   color: black;
   text-decoration: none;
+}
+
+.sidebarHeader__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebarHeader__user {
+  margin-bottom: 20px;
+  cursor: text;
+}
+
+.sidebarHeader__signedOutUser {
+  margin-bottom: 20px;
 }

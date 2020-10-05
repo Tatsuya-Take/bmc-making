@@ -3,6 +3,8 @@
   display: grid;
   place-items: center;
   background-color: var(--app-background-color);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .register__container {
@@ -13,12 +15,17 @@
   background-color: var(--app-background-color);
   border-radius: 10px;
   box-shadow: var(--contents-shadow);
+  border: 1px solid var(--contents-border);
 }
 
 .register__container > form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.register__container > form > h2 {
   margin-bottom: 20px;
 }
 
@@ -49,7 +56,7 @@
 }
 
 .register__signUpButton {
-  border: var(--button-border);
+  border: var(--contents-border);
   border-radius: 5px;;
   height: 40px;
   width: 50%;
